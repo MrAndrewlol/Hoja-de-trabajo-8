@@ -1,5 +1,5 @@
 /**
- * @author Jose Prince
+ * @author Jose Prince y jo
  * Algoritmos y Estructura de Datos
  * @date 24/03/2023
  */
@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
 
 import org.junit.Test;
 
-public class PruebasUnitarias {
+public class PruebasUnitarias { 
 
     PriorityQueue<Integer> heap = null;
     priorityQ<Integer> queue = new priorityQ<Integer>();
