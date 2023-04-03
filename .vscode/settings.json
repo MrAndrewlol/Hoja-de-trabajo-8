@@ -1,6 +1,10 @@
 {
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Users\\josep\\Downloads\\bailey.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\josep\\Downloads\\bailey.jar"
+        ]
+    }
 }

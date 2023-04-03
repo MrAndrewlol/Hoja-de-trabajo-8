@@ -1,10 +1,14 @@
 import java.io.File;
+import java.util.PriorityQueue;
 import java.util.Scanner;
+
 
 public class UI {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
         boolean ejecucion = true;
+
+        PriorityQueue<Integer> heap = null;
 
         priorityQ<Integer> queue = new priorityQ<Integer>();
 
@@ -16,7 +20,7 @@ public class UI {
                 int rpa = in.nextInt();
                 in.nextLine();
 
-                Object heap = queue.getInstance(rpa);
+                heap = queue.getInstance(rpa);
                 ejecucion = false;
 
             } catch (Exception e) {
@@ -36,7 +40,13 @@ public class UI {
             while (myReader.hasNextLine()){
                 String data = myReader.nextLine();
                 System.out.println(data);
+                String[] datos = data.split(",");
+                Integer ni = Integer.valueOf(datos[2]) + 120;
+                heap.add(ni);
             }
+
+            System.out.println(heap.toString());
+            System.out.println(heap.peek());
     
             myReader.close();
         } catch (Exception e) {
