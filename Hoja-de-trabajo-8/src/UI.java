@@ -18,6 +18,7 @@ public class UI {
 
                 Object heap = queue.getInstance(rpa);
                 ejecucion = false;
+
             } catch (Exception e) {
                 in.nextLine();
                 System.out.println("Debe elegir entre 1 o 2");
@@ -25,19 +26,24 @@ public class UI {
             }
         }
 
+        System.out.println("Ingrese la ruta de acceso del archivo: ");
+        String ruteFile = in.nextLine();
+
         try {
-            File myFile = new File("procesos");
+            File myFile = new File(ruteFile);
             Scanner myReader = new Scanner(myFile);
+    
             while (myReader.hasNextLine()){
                 String data = myReader.nextLine();
                 System.out.println(data);
             }
-
+    
             myReader.close();
         } catch (Exception e) {
+            System.out.println("Ha ocurrido un error");
+            e.printStackTrace();
             // TODO: handle exception
         }
-
 
         
     }
